@@ -1,0 +1,15 @@
+{
+  "name": "proxy-spike",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"bun:next-dev\" \"bun:vite-dev\"",
+    "next-dev": "bun ./apps/next dev",
+    "vite-dev": "bun ./apps/vite dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
